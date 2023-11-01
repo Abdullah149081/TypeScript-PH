@@ -1,5 +1,3 @@
 # TypeScript-PH
 
-cmd:
-
-tsc --init 
+Module-1
