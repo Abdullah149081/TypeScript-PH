@@ -40,7 +40,7 @@ let unknown: undefined = undefined;
 let nullType: null = null;
 ```
 
-## Array
+### Array
 
 An array is a commonly used non-primitive data type in TypeScript. It represents a list or collection of items. Here are some examples:
 
@@ -54,7 +54,7 @@ friends.push('Asad');
 countries.push('Australia');
 ```
 
-## Tuple
+### Tuple
 
 A tuple is a non-primitive data type in TypeScript that represents an array with a fixed number of elements, and each element can have its own data type. Tuples are useful when you need to work with data that has a specific structure. Here are some examples:
 
@@ -67,7 +67,7 @@ let person: [number, string] = [23, 'Masud'];
 let result: [number, string, boolean] = [42, 'Success', true];
 ```
 
-## Object
+### Object
 
 An object is a non-primitive data type in TypeScript that represents a collection of key-value pairs. Objects are used to structure data and store related information. Here's an example of an object with various properties:
 
@@ -87,7 +87,7 @@ let userData: {
 };
 ```
 
-## Functions
+### Functions
 
 Functions are an essential part of TypeScript for defining and using reusable code. Here are some examples of different types of functions in TypeScript:
 
@@ -108,11 +108,15 @@ const addMinus = (num1: number, num2: number) => num1 - num2;
 ### Object Method
 
 ```typescript
-const arr: number[] = [2, 4, 6];
-const newArray: number[] = arr.map(
-    (element: number): number => element * element,
-);
-console.log(newArray);
+const userInfo = {
+    name: 'Masud',
+    Roll: 149081,
+    balanced: 500,
+    addResult(balanced: number): string {
+        return `Your balanced is ${this.balanced + balanced}`;
+    },
+};
+console.log(userInfo.addResult(30));
 ```
 
 ### Array Map with Arrow Function
@@ -123,4 +127,27 @@ const newArray: number[] = arr.map(
     (element: number): number => element * element,
 );
 console.log(newArray);
+```
+
+### Spread Operator
+
+The spread operator is a powerful feature in TypeScript that allows you to expand elements from an iterable (e.g., an array) into another iterable. Here's an example:
+
+```typescript
+const friends1: string[] = ['Riajul', 'Mes', 'Mijan'];
+const friends2: string[] = ['Asad', 'Shamim', 'Rafi'];
+
+friends1.push(...friends2);
+console.log(friends1, friends2);
+```
+
+### Rest Operator
+
+The rest operator allows you to gather individual elements into an array when working with function parameters. It is useful when you need to handle an arbitrary number of arguments as an array. Here's an example:
+
+```typescript
+const greetingFriends = (...friends: string[]) => {
+    friends.forEach((friend: string) => console.log(`Hi ${friend}`));
+};
+greetingFriends('Asad');
 ```

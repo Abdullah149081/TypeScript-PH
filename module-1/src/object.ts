@@ -1,4 +1,4 @@
-let userData: {
+{let userData: {
     readonly student: 'Daffodil'; // type ==> literal types // can't changed property value because readonly use.
     firstName: string;
     MiddleName?: string; //optional  type
@@ -13,3 +13,4 @@ let userData: {
 };
 
 console.log(userData);
+}

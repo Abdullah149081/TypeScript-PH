@@ -1,4 +1,4 @@
-// Basic data type
+{// Basic data type
 
 // number
 let userId: number = 101;
@@ -16,3 +16,4 @@ let unknown: undefined = undefined;
 let nullType: null = null;
 
 console.log(userId, userName, unknown, nullType);
+}
