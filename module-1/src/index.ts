@@ -4,7 +4,7 @@
 let userId: number = 101;
 
 // string
-let userName: string = "Abdulah Al Masud";
+let userName: string = 'Abdulah Al Masud';
 
 // boolean
 let isAdmin: boolean = true;
