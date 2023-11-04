@@ -157,7 +157,7 @@ greetingFriends('Asad');
 Destructuring is a powerful feature in TypeScript that allows you to extract values from objects and arrays. Here's an example:
 
 ```typescript
-object
+object;
 const myInfo = {
     name: {
         firstName: 'Abdulah',
@@ -176,8 +176,31 @@ const {
 console.log(`First Name: ${firstName}`);
 console.log(`Contact: ${contact}`);
 
-Array
+Array;
 const [, , tertiaryColor] = colors;
 
 console.log(`tertiaryColor  Color: ${tertiaryColor}`);
+```
+
+### Type Alias
+
+Type aliases allow you to create custom named types in TypeScript for convenience and clarity. Here are some examples:
+
+### Type Alias for an Object & function
+
+```typescript
+type Student = {
+    name: string;
+    roll: number;
+    contactNO?: number;
+};
+
+const masud: Student = {
+    name: 'masud',
+    contactNO: 134,
+    roll: 34,
+};
+
+type Add = (num1: number, num2: number) => number;
+const sum: Add = (num1, num2) => num1 + num2;
 ```
