@@ -151,3 +151,33 @@ const greetingFriends = (...friends: string[]) => {
 };
 greetingFriends('Asad');
 ```
+
+### Destructuring
+
+Destructuring is a powerful feature in TypeScript that allows you to extract values from objects and arrays. Here's an example:
+
+```typescript
+object
+const myInfo = {
+    name: {
+        firstName: 'Abdulah',
+        middleName: 'Al',
+        lastName: 'Masud',
+    },
+    contact: 1630474,
+    address: 'Dhaka',
+};
+
+const {
+    name: { firstName },
+    contact,
+} = myInfo;
+
+console.log(`First Name: ${firstName}`);
+console.log(`Contact: ${contact}`);
+
+Array
+const [, , tertiaryColor] = colors;
+
+console.log(`tertiaryColor  Color: ${tertiaryColor}`);
+```
