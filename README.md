@@ -204,3 +204,70 @@ const masud: Student = {
 type Add = (num1: number, num2: number) => number;
 const sum: Add = (num1, num2) => num1 + num2;
 ```
+
+### Type Unions and Intersection Types
+
+Type unions and intersection types allow you to combine and compose different types in TypeScript. Here are some examples:
+
+### Type Unions
+
+```typescript
+type FrontEndDeveloper = {
+    skills: string[];
+    designation: 'Front-end Developer';
+};
+
+type BackEndDeveloper = {
+    skills: string[];
+    designation: 'Backend Developer';
+};
+
+type Developer = FrontEndDeveloper | BackEndDeveloper;
+
+const webDeveloper: Developer = {
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    designation: 'Front-end Developer',
+};
+```
+### Intersection Types
+
+```typescript
+type FrontEndDeveloper = {
+    skills: string[];
+    designation: 'Front-end Developer';
+};
+
+type BackEndDeveloper = {
+    skills: string[];
+    designation: 'Backend Developer';
+};
+
+type FullStackDeveloper = FrontEndDeveloper & BackEndDeveloper;
+
+const fullStackDev: FullStackDeveloper = {
+    skills: ['HTML', 'CSS', 'Node.js'],
+    designation: 'Full-stack Developer',
+};
+```
+
+### Ternary Operator, Optional Chaining, and Nullish Coalescing Operator
+
+#### Ternary Operator
+
+The ternary operator is a concise way to write conditional statements. Here's an example:
+
+```typescript
+const age: number = 18;
+const isAdult = age >= 18 ? 'adult' : 'not an adult';
+console.log(isAdult);
+```
+
+### Nullish Coalescing Operator
+
+The nullish coalescing operator (??) is used to provide a default value when a variable is null or undefined. Here's an example:
+
+```typescript
+const isAuthentication = null;
+const check = isAuthentication ?? 'Guest';
+console.log(check);
+```
