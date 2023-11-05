@@ -1,4 +1,4 @@
-# Module-2 
+# Module-2
 
 ## Advanced TypeScript Features
 
@@ -20,4 +20,32 @@ const sum = (value: number | string): number | string | undefined => {
 const result = sum(100) as number;
 const result1 = sum('100') as string;
 console.log({ result, result1 });
+```
+
+### Interfaces
+
+In TypeScript, an **interface** defines the structure of an object, specifying the properties and methods that the object must have. Interfaces play a crucial role in enforcing type safety and improving code readability. Here's an example:
+
+```typescript
+// Interface
+interface Person {
+    name: string;
+    age: number;
+}
+
+const person: Person = {
+    name: 'Masud',
+    age: 24,
+};
+
+// Extending Interfaces
+interface Employee extends Person {
+    employeeId: string;
+}
+
+const employee: Employee = {
+    name: 'Masud',
+    age: 24,
+    employeeId: '134',
+};
 ```
