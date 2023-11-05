@@ -49,3 +49,45 @@ const employee: Employee = {
     employeeId: '134',
 };
 ```
+
+# Module-2
+
+## Advanced TypeScript Features
+
+### Generics
+
+Generics in TypeScript allow you to create components (functions, classes, interfaces) that can work with a variety of data types while still maintaining type safety. They enable you to write reusable code by specifying placeholders for types.
+
+In a generic definition, you typically use a type parameter (often denoted as T but can be any identifier) to represent an unspecified data type. This type parameter can then be used as the data type for function parameters, return values, class properties, or interface members. Here's an example:
+
+```typescript
+interface Developer<T, L = null> {
+    name: string;
+    computer: {
+        brand: string;
+        model: string;
+        releaseDate: string;
+    };
+    mobile: T;
+}
+
+type Mobile = {
+    brand: string;
+    ram: number;
+    releaseDate: string;
+};
+
+const webDeveloper: Developer<Mobile> = {
+    name: 'Masud',
+    computer: {
+        brand: 'Dell',
+        model: 'XPS',
+        releaseDate: '2022-01-01',
+    },
+    mobile: {
+        brand: 'iPhone',
+        ram: 8,
+        releaseDate: '2022-02-15',
+    },
+};
+```
