@@ -91,3 +91,37 @@ const webDeveloper: Developer<Mobile> = {
     },
 };
 ```
+
+### Mapped Types and Lookup Types
+
+Mapped types and lookup types are powerful features in TypeScript that allow you to create new types based on existing types or dynamically lookup property types. Here's an example:
+
+```typescript
+type AreaNumber = {
+    height: number;
+    width: number;
+};
+
+// Lookup Type
+type Height = AreaNumber['height']; // Results in the type number
+
+// Mapped Type
+type AreaString = {
+    [key in keyof AreaNumber]: string;
+};
+
+// Dynamic Lookup Type
+type DynamicType<T> = {
+    [key in keyof T]: T[key]; // Dynamic lookup
+};
+
+type User = {
+    height: number;
+    name: string;
+};
+
+const result: DynamicType<User> = {
+    name: 'Masud',
+    height: 5,
+};
+```
