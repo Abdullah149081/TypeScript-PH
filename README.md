@@ -125,3 +125,46 @@ const result: DynamicType<User> = {
     height: 5,
 };
 ```
+
+
+### Utility Types
+
+Utility types in TypeScript provide convenient tools for manipulating and working with types. Here's an example:
+
+```typescript
+type Person = {
+    name: string;
+    number: number;
+    email: string;
+    contact: string;
+};
+
+// Pick
+type Name = Pick<Person, 'name' | 'number'>; // Results in { name: string; number: number; }
+
+// Omit
+type Info = Omit<Person, 'name' | 'number'>; // Results in { email: string; contact: string; }
+
+// Required
+type PersonRequired = Required<Person>; // Results in { name: string; number: number; email: string; contact: string; }
+
+// Partial
+type PersonPartial = Partial<Person>; // Results in { name?: string; number?: number; email?: string; contact?: string; }
+
+// Readonly
+type PersonReadOnly = Readonly<Person>;
+const user: PersonReadOnly = {
+    name: 'Masud',
+    number: 24,
+    email: '@.com',
+    contact: '013',
+};
+
+// Record
+type MyObj = Record<string, string>; // <key,value>
+const obj: MyObj = {
+    a: 'a',
+    b: '2',
+};
+const EmptyObj: Record<string, unknown> = {};
+
