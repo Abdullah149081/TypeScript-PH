@@ -135,3 +135,54 @@ const result2 = new Circle(2);
 result(result1);
 result(result2);
 ```
+
+
+
+### Abstraction in Object-Oriented Programming (OOP) with TypeScript
+
+Abstraction is a key OOP principle that allows you to define a blueprint for classes and methods without providing their full implementation. TypeScript supports abstraction through interfaces and abstract classes. Here's an example:
+
+```typescript
+// Using an interface for abstraction
+interface Vehicle1 {
+    startEngine(): void;
+    stopEngine(): void;
+    move(): void;
+}
+
+class Car implements Vehicle1 {
+    startEngine(): void {
+        console.log('Starting the car engine');
+    }
+    stopEngine(): void {
+        console.log('Stopping the car engine');
+    }
+    move(): void {
+        console.log('Moving the car');
+    }
+}
+
+const TokyoCar = new Car();
+TokyoCar.startEngine();
+
+// Using an abstract class for abstraction
+abstract class Vehicle2 {
+    abstract startEngine(): void;
+    abstract stopEngine(): void;
+    abstract move(): void;
+}
+
+class ToyotaCar extends Vehicle2 {
+    startEngine(): void {
+        console.log('Starting the car engine');
+    }
+    stopEngine(): void {
+        console.log('Stopping the car engine');
+    }
+    move(): void {
+        console.log('Moving the car');
+    }
+}
+
+const hondaCar = new ToyotaCar();
+```
