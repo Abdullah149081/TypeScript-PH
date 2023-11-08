@@ -71,3 +71,67 @@ const teacher = new Teacher('Masud', 24, 'Dhaka', 'Junior Instructor');
 teacher.getSleepHours(6); // Teacher inherits the getSleepHours method
 teacher.takeClass(2); // Teacher has its own method
 ```
+
+
+
+### Polymorphism in Object-Oriented Programming (OOP) with TypeScript
+
+Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows different classes to provide their own implementation for a common method or property. In TypeScript, this can be achieved through method overriding. Here's an example:
+
+```typescript
+class Person {
+    getSleep() {
+        console.log('I am sleeping for 8 hours');
+    }
+}
+
+class Student extends Person {
+    getSleep() {
+        console.log('I am sleeping for 7 hours');
+    }
+}
+
+class Developer extends Person {
+    getSleep() {
+        console.log('I am sleeping for 6 hours');
+    }
+}
+
+const sleepingTime = (param: Person) => {
+    param.getSleep();
+};
+
+const person1 = new Person();
+const person2 = new Student();
+const person3 = new Developer();
+
+sleepingTime(person1);
+sleepingTime(person2);
+sleepingTime(person3);
+
+class Shape {
+    getArea(): number {
+        return 0;
+    }
+}
+
+class Circle extends Shape {
+    constructor(public radius: number) {
+        super();
+    }
+
+    getArea(): number {
+        return parseFloat((Math.PI * this.radius * this.radius).toFixed(3));
+    }
+}
+
+const result = (params: Shape) => {
+    console.log(`Area: ${params.getArea()}`);
+};
+
+const result1 = new Shape();
+const result2 = new Circle(2);
+
+result(result1);
+result(result2);
+```
