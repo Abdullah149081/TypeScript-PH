@@ -31,19 +31,19 @@ Follow these steps to get started with the TypeScript-PH project:
 2. Choose the desired module:
 
     ```bash
-    cd Module-1
+    git checkout Module-1
     ```
 
     or
 
     ```bash
-    cd Module-2
+    git checkout Module-2
     ```
 
     or
 
     ```bash
-    cd Module-3
+    git checkout Module-3
     ```
 
 3. Explore the README file in each module for specific instructions, code examples, and exercises.
