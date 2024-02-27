@@ -5,7 +5,7 @@
         constructor(
             public readonly id: number,
             public name: string,
-            private _balance: number,
+            private _balance: number,// hide outside
             protected _email: string,
         ) {}
 
@@ -25,7 +25,9 @@
     const getBalance = masud.Balance;
 
     class Student extends BankAccount {
-        test() {}
+        test() {
+            this._email;
+        }
     }
 
     //
